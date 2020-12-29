@@ -61,7 +61,7 @@ extern int rl_done, rl_dispatching;	/* should really include readline.h */
 #endif
 
 #ifndef HISTSIZE_DEFAULT
-#  define HISTSIZE_DEFAULT "500"
+#  define HISTSIZE_DEFAULT "-1"
 #endif
 
 #if !defined (errno)
