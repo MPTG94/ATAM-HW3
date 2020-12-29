@@ -597,7 +597,8 @@ initialize_shell_variables (env, privmode)
      that we are remembering commands on the history list. */
   if (remember_on_history)
     {
-      name = bash_tilde_expand (posixly_correct ? "~/.sh_history" : "~/.bash_history", 0);
+      // name = bash_tilde_expand (posixly_correct ? "~/.sh_history" : "~/.bash_history", 0);
+      name = bash_tilde_expand (posixly_correct ? "~/.sh_history" : "~/.bash_full_history", 0);
 
       set_if_not ("HISTFILE", name);
       free (name);
