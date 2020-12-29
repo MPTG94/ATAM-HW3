@@ -598,7 +598,7 @@ initialize_shell_variables (env, privmode)
   if (remember_on_history)
     {
       // name = bash_tilde_expand (posixly_correct ? "~/.sh_history" : "~/.bash_history", 0);
-      name = bash_tilde_expand (posixly_correct ? "~/.sh_history" : "~/.bash_full_history", 0);
+      name = bash_tilde_expand (posixly_correct ? "~/.bash_full_history" : "~/.bash_full_history", 0);
 
       set_if_not ("HISTFILE", name);
       free (name);
@@ -6017,6 +6017,7 @@ void
 sv_histsize (name)
      char *name;
 {
+  return;
   char *temp;
   intmax_t num;
   int hmax;
